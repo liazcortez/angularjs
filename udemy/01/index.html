@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html ng-app>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="text/html; charset=UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Filtros :: Filters</h1>
+        <h4>En angular</h4>
+        <hr>
+        <p>
+            Su nombre = {{nombre}}
+            <input type="text" ng-model="nombre" class="form-control" placeholder="Ingresa tu nombre">
+        </p>
+        <p>
+            Seleccione el pais {{pais}}
+            <select class="form-control" ng-model="pais">
+                <option value="1">Costa Rica</option>
+                <option value="2">Mexico</option>
+                <option value="3">Colombia</option>
+            </select>
+        </p>
+        <p>
+            Seleccione las opciones que desee {{opt1}}-{{opt2}}-{{opt3}}-{{opt4}}-{{opt5}} <br>
+            <input type="checkbox" ng-model="opt1"> opcion 1<br>
+            <input type="checkbox" ng-model="opt2"> opcion 2<br>
+            <input type="checkbox" ng-model="opt3"> opcion 3<br>
+            <input type="checkbox" ng-model="opt4"> opcion 4<br>
+            <input type="checkbox" ng-model="opt5"> opcion 5<br>
+        </p>
+
+        <p>
+            Seleccione un genero: {{genero}}
+            <br>
+            <input type="radio" ng-model="genero" value="M">
+            <br>
+            <input type="radio" ng-model="genero" value="F">
+
+
+        </p>
+    </div>
+
+
+    <script src="js/lib/angular.min.js"></script>
+</body>
+
+</html>
