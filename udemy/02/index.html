@@ -44,10 +44,29 @@
                         <br>
                         <strong>Edad:</strong> {{profesor.edad}} años
                     </div>
+
+
                 </section>
             </div>
 
 
+        </div>
+        <!--fin del row-->
+
+        <div class="row">
+            <div class="col-sm-6">
+                <section class="panel">
+                    <div class="panel-body">
+                        Nombre:
+                        <input type="text" class="form-control" ng-model="profesor.nombre">
+                        <br> Edad:
+                        <input type="number" class="form-control" ng-model="profesor.edad">
+                        <br> Bio:
+                        <textarea class="form-control" rows="10" ng-model="profesor.bio"></textarea>
+
+                    </div>
+                </section>
+            </div>
         </div>
 
 
