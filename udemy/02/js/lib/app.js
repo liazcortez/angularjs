@@ -4,6 +4,26 @@ app.controller('profesorCtrl', ['$scope', function(scope) {
 
 
     scope.profesor = profesorData;
+    scope.editar = {};
+    scope.ocultar = true;
+    scope.editarProfesor = function() {
+        angular.copy(scope.profesor, scope.editar);
+        scope.ocultar = false;
+
+    }
+    scope.guardar = function() {
+
+        angular.copy(scope.editar, scope.profesor, );
+        scope.ocultar = true;
+
+
+    }
+    scope.borrar = function() {
+
+        scope.editar = {};
+        scope.ocultar = true;
+
+    }
 
 
 }]);

@@ -8,7 +8,7 @@
 
     <!-- Incluir Bootstrap -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
-
+    <link rel="stylesheet" href="css/animate.css">
     <!-- Incluir AngularJS -->
     <script src="js/lib/angular.min.js"></script>
     <script src="js/lib/app.js"></script>
@@ -43,6 +43,8 @@
                         <br>
                         <br>
                         <strong>Edad:</strong> {{profesor.edad}} años
+                        <br>
+                        <button class="btn btn-primary" ng-click="editarProfesor()">Editar</button>
                     </div>
 
 
@@ -53,16 +55,19 @@
         </div>
         <!--fin del row-->
 
-        <div class="row">
-            <div class="col-sm-6">
+        <div class="row animated fast fadeIn" ng-hide="ocultar">
+            <div class="col-sm-9">
                 <section class="panel">
                     <div class="panel-body">
                         Nombre:
-                        <input type="text" class="form-control" ng-model="profesor.nombre">
+                        <input type="text" class="form-control" ng-model="editar.nombre">
                         <br> Edad:
-                        <input type="number" class="form-control" ng-model="profesor.edad">
+                        <input type="number" class="form-control" ng-model="editar.edad">
                         <br> Bio:
-                        <textarea class="form-control" rows="10" ng-model="profesor.bio"></textarea>
+                        <textarea class="form-control" rows="10" ng-model="editar.bio"></textarea>
+                        <br>
+                        <button class="btn btn-primary" ng-click="guardar()">click</button>
+                        <button class="btn btn-danger" ng-click="borrar()">borrar</button>
 
                     </div>
                 </section>
